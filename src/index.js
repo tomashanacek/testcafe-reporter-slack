@@ -20,7 +20,7 @@ export default function () {
 
         reportTestDone (name, testRunInfo) {
             const hasErr = testRunInfo.errs.length > 0;
-            const result = hasErr ? ':heavy_multiplication_x:' : ':heavy_check_mark: ';
+            const result = hasErr ? ':x:' : ':white_check_mark:';
 
             this.slack.addMessage(`${result} ${name}`);
 
