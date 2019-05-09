@@ -20,7 +20,6 @@ export default class SlackMessage {
 
     sendMessage(message, slackProperties = null) {
         this.slack.webhook(Object.assign({
-            channel: envs('TESTCAFE_SLACK_CHANNEL', '#testcafe'),
             username: envs('TESTCAFE_SLACK_BOT', 'testcafebot'),
             text: message
         }, slackProperties), function (err, response) {
